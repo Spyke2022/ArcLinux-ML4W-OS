@@ -1,0 +1,13 @@
+/* -----------------------------------------------------
+ * Import Matugen Colors
+ * ----------------------------------------------------- */
+@import '../../../../../.config/waybar/colors.css';
+
+@import '../../ml4w-glass/style.css';
+/* Botao de energia */
+#custom-power {
+    color: #ff0000;
+    font-size: 20px;
+    padding: 0 12px;
+    margin: 0 4px;
+}

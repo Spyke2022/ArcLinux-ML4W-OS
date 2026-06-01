@@ -1,0 +1,109 @@
+{
+    "layer": "top",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 0,
+    "include": [
+        "~/.config/waybar/modules.json"
+    ],
+    "modules-left": [
+        "custom/appmenu",
+        "custom/internet",
+        "custom/midia",
+        "custom/escritorio",
+        "custom/sistema",
+        "hyprland/workspaces",
+        "custom/empty"
+    ],
+    "modules-center": [
+        "clock",
+        "custom/empty"
+    ],
+    "modules-right": [
+        "custom/updates",
+        "pulseaudio",
+        "bluetooth",
+        "network",
+        "battery",
+        "group/hardware",
+        "group/tools",
+        "tray",
+        "custom/notification",
+        "custom/exit",
+        "custom/ml4w-welcome",
+        "custom/power"
+    ],
+    "custom/internet": {
+        "format": "🌐",
+        "tooltip-format": "Internet",
+        "on-click": "~/.config/hypr/scripts/menu.sh internet"
+    },
+    "custom/midia": {
+        "format": "🎵",
+        "tooltip-format": "Multimídia",
+        "on-click": "~/.config/hypr/scripts/menu.sh midia"
+    },
+    "custom/escritorio": {
+        "format": "📄",
+        "tooltip-format": "Escritório",
+        "on-click": "~/.config/hypr/scripts/menu.sh escritorio"
+    },
+    "custom/sistema": {
+        "format": "🔧",
+        "tooltip-format": "Sistema & Ferramentas",
+        "on-click": "~/.config/hypr/scripts/menu.sh sistema"
+    },
+    "custom/appmenu": {
+        "format": " Apps",
+        "on-click": "~/.config/hypr/scripts/launcher.sh",
+        "on-click-right": "~/.config/hypr/scripts/keybindings.sh",
+        "tooltip-format": "Lançador de aplicativos"
+    },
+    "custom/empty": {
+        "format": ""
+    },
+    "custom/ml4w-welcome": {
+        "on-click": "qs ipc call sidebar toggle",
+        "on-click-right": "qs ipc call welcome toggle",
+        "format": " ",
+        "tooltip-format": "ML4W Sidebar"
+    },
+    "custom/exit": {
+        "format": "",
+        "on-click": "qs ipc call power toggle",
+        "tooltip-format": "Menu de energia"
+    },
+    "custom/notification": {
+        "tooltip-format": "Notificações",
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "notifications_active",
+            "none": "notifications",
+            "dnd-notification": "notifications_active",
+            "dnd-none": "notifications_paused"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    "custom/updates": {
+        "format": "  {}",
+        "escape": true,
+        "return-type": "json",
+        "exec": "~/.config/ml4w/scripts/ml4w-check-system-updates",
+        "interval": 1800,
+        "signal": 1,
+        "hide-empty-text": true,
+        "on-click": "~/.config/ml4w/settings/installupdates.sh"
+    },
+    "custom/power": {
+        "format": "⏻",
+        "tooltip-format": "Menu de energia",
+        "on-click": "~/.config/hypr/scripts/powermenu.sh"
+    }
+}
