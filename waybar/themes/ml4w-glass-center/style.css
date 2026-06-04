@@ -1,0 +1,47 @@
+
+/* ── Garuda Tools ── */
+#custom-forensics,
+#custom-productivity {
+    padding: 0 12px;
+    margin: 2px 4px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+#custom-forensics {
+    color: #f38ba8;
+    background-color: rgba(243, 139, 168, 0.1);
+    border-bottom: 2px solid transparent;
+}
+#custom-forensics:hover {
+    background-color: rgba(243, 139, 168, 0.25);
+    border-bottom: 2px solid #f38ba8;
+}
+#custom-productivity {
+    color: #89b4fa;
+    background-color: rgba(137, 180, 250, 0.1);
+    border-bottom: 2px solid transparent;
+}
+#custom-productivity:hover {
+    background-color: rgba(137, 180, 250, 0.25);
+    border-bottom: 2px solid #89b4fa;
+}
+
+/* ── Menus de Categoria ── */
+#custom-internet,
+#custom-midia,
+#custom-escritorio,
+#custom-sistema {
+    font-size: 16px;
+    padding: 0 8px;
+    margin: 2px 2px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    background: transparent;
+}
+
+#custom-internet:hover  { background: rgba(137, 180, 250, 0.2); }
+#custom-midia:hover     { background: rgba(166, 227, 161, 0.2); }
+#custom-escritorio:hover { background: rgba(249, 226, 175, 0.2); }
+#custom-sistema:hover   { background: rgba(243, 139, 168, 0.2); }
